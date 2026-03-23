@@ -22,9 +22,9 @@ class PolicyAgentExecutor(AgentExecutor):
         self.agent = PZUAgent()
 
     async def execute(
-            self,
-            context: RequestContext,
-            event_queue: EventQueue,
+        self,
+        context: RequestContext,
+        event_queue: EventQueue,
     ) -> None:
         prompt = context.get_user_input()
         response = self.agent.answer_query(prompt)
@@ -32,9 +32,9 @@ class PolicyAgentExecutor(AgentExecutor):
         await event_queue.enqueue_event(message)
 
     async def cancel(
-            self,
-            context: RequestContext,
-            event_queue: EventQueue,
+        self,
+        context: RequestContext,
+        event_queue: EventQueue,
     ) -> None:
         pass
 
@@ -77,5 +77,5 @@ def main() -> None:
     uvicorn.run(server.build(), host=HOST, port=PORT)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

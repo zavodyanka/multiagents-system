@@ -1,22 +1,11 @@
 import base64
 import io
 import os
-import tempfile
 from pathlib import Path
 from openai import OpenAI
 from pypdf import PdfReader
 
-from anthropic import AnthropicVertex
-from anthropic.types import (
-    Base64PDFSourceParam,
-    DocumentBlockParam,
-    MessageParam,
-    TextBlockParam,
-)
 from dotenv import load_dotenv
-from IPython.display import Markdown, display
-
-from helpers import authenticate
 
 
 class PZUAgent:
@@ -29,7 +18,9 @@ class PZUAgent:
         #     access_token=credentials.token,
         # )
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        with Path("../data/Zakres_swiadczen_zdrowotnych_Optimum.pdf").open("rb") as file:
+        with Path("../data/Zakres_swiadczen_zdrowotnych_Optimum.pdf").open(
+            "rb"
+        ) as file:
             self.pdf_data = base64.standard_b64encode(file.read()).decode("utf-8")
 
         pdf_bytes = base64.b64decode(self.pdf_data)
@@ -46,16 +37,14 @@ class PZUAgent:
                         "You are an expert medical care agent designed to assist with coverage queries. "
                         "Use the provided documents to answer questions about medical care policies. "
                         "If the information is not available in the documents, respond with 'I don't know'"
-                    )
-                 },
-                {
-                    "role": "user",
-                    "content": f"{self.text}\n\nQuestion: {prompt}"
+                    ),
                 },
+                {"role": "user", "content": f"{self.text}\n\nQuestion: {prompt}"},
             ],
         )
         print(response)
         return response.choices[0].message.content
+
 
 # if __name__ == '__main__':
 #

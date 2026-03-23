@@ -47,7 +47,7 @@ def authenticate(
         target_principal=target_principal,
         target_scopes=["https://www.googleapis.com/auth/cloud-platform"],
         lifetime=7200,  # 2 Hours
-        iam_endpoint_override=os.getenv("DLAI_GOOGLE_IAM_ENDPOINT")
+        iam_endpoint_override=os.getenv("DLAI_GOOGLE_IAM_ENDPOINT"),
     )
 
     # 6. Refresh to get the final token

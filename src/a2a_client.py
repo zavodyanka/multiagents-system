@@ -1,7 +1,7 @@
 import asyncio
 
-import httpx
 from IPython.display import Markdown, display
+
 # from a2a.client import (
 #     Client,
 #     ClientConfig,
@@ -31,15 +31,11 @@ research_port = os.environ.get("RESEARCH_AGENT_PORT")
 
 print(f"{host}, {pzu_port}, {research_port}")
 
-pzu_agent = RemoteA2aAgent(
-    name="pzu_agent",
-    agent_card=f"http://{host}:{pzu_port}"
-)
+pzu_agent = RemoteA2aAgent(name="pzu_agent", agent_card=f"http://{host}:{pzu_port}")
 print("\tℹ️", f"{pzu_agent.name} initialized")
 
 health_research_agent = RemoteA2aAgent(
-    name="health_research_agent",
-    agent_card=f"http://{host}:{research_port}"
+    name="health_research_agent", agent_card=f"http://{host}:{research_port}"
 )
 print("\tℹ️", f"{health_research_agent.name} initialized")
 
@@ -49,11 +45,12 @@ root_agent = SequentialAgent(
     sub_agents=[
         pzu_agent,
         health_research_agent,
-    ]
+    ],
 )
 
+
 async def main():
-    #prompt = "How much would I pay for mental health therapy?"
+    # prompt = "How much would I pay for mental health therapy?"
     prompt = "How do I get mental health therapy?"
 
     print("Running Healthcare Workflow Agent")
@@ -64,7 +61,8 @@ async def main():
         if event.is_final_response() and event.content:
             display(Markdown(event.content.parts[0].text))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     asyncio.run(main())
 # def display_agent_card(agent_card: AgentCard) -> None:
 #     def esc(text: str) -> str:

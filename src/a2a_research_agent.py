@@ -7,13 +7,12 @@ from google.adk.agents import LlmAgent
 from google.adk.models.lite_llm import LiteLlm
 from google.adk.tools import google_search
 
-from helpers import authenticate
 import logging
 import warnings
 
 logging.disable(level=logging.WARNING)
-warnings.filterwarnings('ignore', category=UserWarning)
-warnings.filterwarnings('ignore', category=FutureWarning)
+warnings.filterwarnings("ignore", category=UserWarning)
+warnings.filterwarnings("ignore", category=FutureWarning)
 
 load_dotenv()
 
@@ -33,18 +32,20 @@ research_agent = LlmAgent(
     tools=[google_search],
     description="Provides healthcare information about symptoms, health "
     "conditions, treatments, and procedures using up-to-date web resources.",
-    instruction="""You are a healthcare research agent tasked with 
-    providing information about health conditions. Use the google_search 
-    tool to find information on the web about options, symptoms, treatments, 
-    and procedures. Cite your sources in your responses. Output all of the 
+    instruction="""You are a healthcare research agent tasked with
+    providing information about health conditions. Use the google_search
+    tool to find information on the web about options, symptoms, treatments,
+    and procedures. Cite your sources in your responses. Output all of the
     information you find.""",
 )
+
 
 def main() -> None:
     # Make your agent A2A-compatible
     a2a_app = to_a2a(research_agent, host=HOST, port=PORT)
     print(f"Running Health Research Agent {HOST}:{PORT}")
     uvicorn.run(a2a_app, host=HOST, port=PORT)
+
 
 if __name__ == "__main__":
     main()
