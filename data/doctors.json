@@ -1,0 +1,249 @@
+[
+  {
+    "id": "DOC001",
+    "name": "Dr. Anna Kowalska",
+    "specialty": "Cardiology",
+    "address": {
+      "street": "ul. Grabiszyńska 45",
+      "city": "Wrocław",
+      "state": "Dolnośląskie",
+      "zip_code": "53-503"
+    },
+    "phone": "+48 71 555 1001",
+    "email": "a.kowalska@wroclawmed.pl",
+    "years_experience": 14,
+    "board_certified": true,
+    "hospital_affiliations": [
+      "Uniwersytecki Szpital Kliniczny we Wrocławiu"
+    ],
+    "education": {
+      "medical_school": "Uniwersytet Medyczny we Wrocławiu",
+      "residency": "USK Wrocław",
+      "fellowship": "Kardiologia Interwencyjna"
+    },
+    "languages": ["Polish", "English"],
+    "accepts_new_patients": true,
+    "insurance_accepted": ["NFZ", "PZU", "LuxMed", "Medicover"]
+  },
+  {
+    "id": "DOC002",
+    "name": "Dr. Piotr Nowak",
+    "specialty": "Dermatology",
+    "address": {
+      "street": "ul. Legnicka 12",
+      "city": "Wrocław",
+      "state": "Dolnośląskie",
+      "zip_code": "54-203"
+    },
+    "phone": "+48 71 555 1002",
+    "email": "p.nowak@dermawro.pl",
+    "years_experience": 10,
+    "board_certified": true,
+    "hospital_affiliations": ["Dolnośląskie Centrum Dermatologii"],
+    "education": {
+      "medical_school": "UM Wrocław",
+      "residency": "Szpital Wojewódzki Wrocław",
+      "fellowship": "Dermatologia estetyczna"
+    },
+    "languages": ["Polish", "English"],
+    "accepts_new_patients": true,
+    "insurance_accepted": ["NFZ", "PZU", "Enel-Med"]
+  },
+  {
+    "id": "DOC003",
+    "name": "Dr. Katarzyna Zielińska",
+    "specialty": "Pediatrics",
+    "address": {
+      "street": "ul. Borowska 213",
+      "city": "Wrocław",
+      "state": "Dolnośląskie",
+      "zip_code": "50-556"
+    },
+    "phone": "+48 71 555 1003",
+    "email": "k.zielinska@pediatria.pl",
+    "years_experience": 9,
+    "board_certified": true,
+    "hospital_affiliations": ["USK Wrocław"],
+    "education": {
+      "medical_school": "UM Wrocław",
+      "residency": "USK Wrocław",
+      "fellowship": "Neonatologia"
+    },
+    "languages": ["Polish"],
+    "accepts_new_patients": true,
+    "insurance_accepted": ["NFZ", "PZU"]
+  },
+  {
+    "id": "DOC004",
+    "name": "Dr. Marek Wiśniewski",
+    "specialty": "Orthopedics",
+    "address": {
+      "street": "ul. Hallera 78",
+      "city": "Wrocław",
+      "state": "Dolnośląskie",
+      "zip_code": "53-324"
+    },
+    "phone": "+48 71 555 1004",
+    "email": "m.wisniewski@ortho.pl",
+    "years_experience": 16,
+    "board_certified": true,
+    "hospital_affiliations": ["Szpital Specjalistyczny Wrocław"],
+    "education": {
+      "medical_school": "UM Wrocław",
+      "residency": "Wojskowy Szpital Kliniczny",
+      "fellowship": "Chirurgia stawów"
+    },
+    "languages": ["Polish", "English", "German"],
+    "accepts_new_patients": false,
+    "insurance_accepted": ["NFZ", "PZU", "LuxMed"]
+  },
+  {
+    "id": "DOC005",
+    "name": "Dr. Tomasz Lewandowski",
+    "specialty": "Neurology",
+    "address": {
+      "street": "ul. Traugutta 112",
+      "city": "Wrocław",
+      "state": "Dolnośląskie",
+      "zip_code": "50-419"
+    },
+    "phone": "+48 71 555 1005",
+    "email": "t.lewandowski@neuro.pl",
+    "years_experience": 12,
+    "board_certified": true,
+    "hospital_affiliations": ["USK Wrocław"],
+    "education": {
+      "medical_school": "UM Wrocław",
+      "residency": "USK",
+      "fellowship": "Neurorehabilitacja"
+    },
+    "languages": ["Polish", "English"],
+    "accepts_new_patients": true,
+    "insurance_accepted": ["NFZ", "PZU", "Medicover"]
+  },
+
+  // --- Poznań ---
+
+  {
+    "id": "DOC011",
+    "name": "Dr. Michał Kaczmarek",
+    "specialty": "Cardiology",
+    "address": {
+      "street": "ul. Przybyszewskiego 49",
+      "city": "Poznań",
+      "state": "Wielkopolskie",
+      "zip_code": "60-355"
+    },
+    "phone": "+48 61 555 2001",
+    "email": "m.kaczmarek@poznanheart.pl",
+    "years_experience": 13,
+    "board_certified": true,
+    "hospital_affiliations": [
+      "Szpital Kliniczny Przemienienia Pańskiego"
+    ],
+    "education": {
+      "medical_school": "Uniwersytet Medyczny w Poznaniu",
+      "residency": "Szpital Kliniczny Poznań",
+      "fellowship": "Kardiologia"
+    },
+    "languages": ["Polish", "English"],
+    "accepts_new_patients": true,
+    "insurance_accepted": ["NFZ", "PZU", "LuxMed"]
+  },
+  {
+    "id": "DOC012",
+    "name": "Dr. Ewa Mazur",
+    "specialty": "Gynecology",
+    "address": {
+      "street": "ul. Polna 33",
+      "city": "Poznań",
+      "state": "Wielkopolskie",
+      "zip_code": "60-535"
+    },
+    "phone": "+48 61 555 2002",
+    "email": "e.mazur@gynpoznan.pl",
+    "years_experience": 11,
+    "board_certified": true,
+    "hospital_affiliations": ["Szpital Ginekologiczno-Położniczy Poznań"],
+    "education": {
+      "medical_school": "UMP",
+      "residency": "Szpital Polna",
+      "fellowship": "Endokrynologia ginekologiczna"
+    },
+    "languages": ["Polish", "English"],
+    "accepts_new_patients": true,
+    "insurance_accepted": ["NFZ", "PZU", "Enel-Med"]
+  },
+  {
+    "id": "DOC013",
+    "name": "Dr. Paweł Dąbrowski",
+    "specialty": "Orthopedics",
+    "address": {
+      "street": "ul. Szwajcarska 3",
+      "city": "Poznań",
+      "state": "Wielkopolskie",
+      "zip_code": "61-285"
+    },
+    "phone": "+48 61 555 2003",
+    "email": "p.dabrowski@ortho-poznan.pl",
+    "years_experience": 18,
+    "board_certified": true,
+    "hospital_affiliations": ["Szpital Miejski Poznań"],
+    "education": {
+      "medical_school": "UMP",
+      "residency": "Szpital Wojewódzki",
+      "fellowship": "Chirurgia kolana"
+    },
+    "languages": ["Polish", "English", "German"],
+    "accepts_new_patients": false,
+    "insurance_accepted": ["NFZ", "PZU"]
+  },
+  {
+    "id": "DOC014",
+    "name": "Dr. Karolina Piotrowska",
+    "specialty": "Psychiatry",
+    "address": {
+      "street": "ul. Szpitalna 27",
+      "city": "Poznań",
+      "state": "Wielkopolskie",
+      "zip_code": "60-572"
+    },
+    "phone": "+48 61 555 2004",
+    "email": "k.piotrowska@psyche.pl",
+    "years_experience": 7,
+    "board_certified": true,
+    "hospital_affiliations": ["Szpital Kliniczny Poznań"],
+    "education": {
+      "medical_school": "UMP",
+      "residency": "Szpital Psychiatryczny",
+      "fellowship": "Psychoterapia"
+    },
+    "languages": ["Polish", "English"],
+    "accepts_new_patients": true,
+    "insurance_accepted": ["NFZ", "PZU", "Medicover"]
+  },
+  {
+    "id": "DOC015",
+    "name": "Dr. Łukasz Wójcik",
+    "specialty": "Internal Medicine",
+    "address": {
+      "street": "ul. Długa 15",
+      "city": "Poznań",
+      "state": "Wielkopolskie",
+      "zip_code": "61-848"
+    },
+    "phone": "+48 61 555 2005",
+    "email": "l.wojcik@interna.pl",
+    "years_experience": 12,
+    "board_certified": true,
+    "hospital_affiliations": ["Szpital Miejski Poznań"],
+    "education": {
+      "medical_school": "UMP",
+      "residency": "Szpital Kliniczny",
+      "fellowship": "Kardiologia ogólna"
+    },
+    "languages": ["Polish"],
+    "accepts_new_patients": true,
+    "insurance_accepted": ["NFZ", "PZU", "LuxMed", "Enel-Med"]
+  }
+]
