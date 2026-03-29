@@ -11,12 +11,6 @@ from dotenv import load_dotenv
 class PZUAgent:
     def __init__(self) -> None:
         load_dotenv()
-        # credentials, project_id = authenticate()
-        # self.client = AnthropicVertex(
-        #     project_id=project_id,
-        #     region="global",
-        #     access_token=credentials.token,
-        # )
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         with Path("../data/Zakres_swiadczen_zdrowotnych_Optimum.pdf").open(
             "rb"
@@ -53,4 +47,8 @@ class PZUAgent:
 #     prompt = "How much would I pay for mental health therapy?"
 #
 #     response = agent.answer_query(prompt)
-#     display(Markdown(response))
+#
+#     from rich.console import Console
+#     from rich.markdown import Markdown
+#     console = Console()
+#     console.print(Markdown(response))

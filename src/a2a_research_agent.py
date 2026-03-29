@@ -22,7 +22,7 @@ load_dotenv()
 PORT = int(os.environ.get("RESEARCH_AGENT_PORT"))
 HOST = os.environ.get("AGENT_HOST")
 
-gpt_model = LiteLlm(model="openai/gpt-4o")
+gpt_model = LiteLlm(model="openai/gpt-4.1")
 
 research_agent = LlmAgent(
     # NOTE: This model has been updated since the video was recorded.

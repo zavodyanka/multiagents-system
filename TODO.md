@@ -6,3 +6,4 @@ List of improvements:
 - [ ] Add RAG for documents
 - [ ] Add MongoDB for results
 - [ ] Add tests
+- [ ] Change google_search on duckduck

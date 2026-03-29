@@ -1,6 +1,7 @@
 import asyncio
 
-from IPython.display import Markdown, display
+from rich.console import Console
+from rich.markdown import Markdown
 
 # from a2a.client import (
 #     Client,
@@ -59,7 +60,8 @@ async def main():
 
     for event in await runner.run_debug(prompt, quiet=True):
         if event.is_final_response() and event.content:
-            display(Markdown(event.content.parts[0].text))
+            console = Console()
+            console.print(Markdown(event.content.parts[0].text))
 
 
 if __name__ == "__main__":

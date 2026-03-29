@@ -22,4 +22,5 @@ dependencies = [
     "openai>=2.29.0",
     "prek>=0.3.6",
     "pypdf>=6.9.1",
+    "rich>=14.3.3",
 ]
